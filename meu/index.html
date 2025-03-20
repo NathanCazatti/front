@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria do NathanLindo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <h3>Cadastro</h3>
+        <input type="text" placeholder="Login" id="Login" ><br>
+        <input type="password" placeholder="Senha" id="Senha"><br>
+        <input type="text" placeholder="Email" id="Email"><br>
+        <input type="number" placeholder="Telefone" id="Telefone"><br>
+        <input type="submit" onclick="login(); return false;">
+    </form>
+    <script>
+        function login() {
+            var login = document.getElementById('Login').value;
+            var senha = document.getElementById('Senha').value;
+            var email = document.getElementById('Email').value;
+            var telefone = document.getElementById('Telefone').value;
+
+            if (login === "Nathan" && senha === "NathanLindo" && email === "NathanLindo2" && telefone === "123") {
+                alert('Sucesso');
+                location.href = "home.html";
+                
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
+        }
+    </script>
+</body>
+</html>
